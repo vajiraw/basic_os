@@ -1,2 +1,1 @@
-[unstable]
-build-std = ["core", "compiler_builtins"]
+
