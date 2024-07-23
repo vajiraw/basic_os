@@ -1,1 +1,5 @@
+[unstable]
+build-std = ["core", "compiler_builtins"]
 
+[target.'cfg(target_os = "windows")']
+rustflags = ["-C", "link-args=/ENTRY:_start /SUBSYSTEM:console"]

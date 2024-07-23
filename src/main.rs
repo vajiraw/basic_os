@@ -15,3 +15,13 @@ pub extern "C" fn _start() -> ! {
 fn panic(_info: &PanicInfo) -> ! {
     loop {}
 }
+
+#[cfg(target_os = "windows")]
+#[no_mangle] 
+pub extern "C" fn mainCRTStartup() -> ! {
+    main();
+}
+
+pub extern "C" fn main() -> ! {
+    loop {}
+}
